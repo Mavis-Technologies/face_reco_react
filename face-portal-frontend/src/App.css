@@ -1,0 +1,263 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* Add to your face-portal-frontend/src/App.css */
+
+.management-section {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+.management-section h2 {
+    margin-top: 0;
+    text-align: left; /* Or center if you prefer */
+}
+
+#faceList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#faceList li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#faceList li:last-child {
+    border-bottom: none;
+}
+
+/* Style for delete buttons in the list */
+#faceList button.delete-button, 
+.management-section > button { /* General button style in management section */
+    padding: 5px 10px;
+    font-size: 0.9em;
+    /* background-color: #3498db; default button color */
+    /* color: white; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#faceList button.delete-button {
+     background-color: #e74c3c; /* Red for delete */
+     color: white;
+}
+#faceList button.delete-button:hover:not(:disabled) {
+    background-color: #c0392b;
+}
+.management-section > button:hover:not(:disabled) {
+    background-color: #2980b9; /* Darker blue for list button */
+}
+.management-section > button:disabled {
+     background-color: #bdc3c7;
+     cursor: not-allowed;
+}
+
+
+/* For general API call status in management section */
+.status-message.api-call { 
+    margin-top:15px;
+    /* Use existing status-message styles for success/error/info */
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .mode-selector, .controls, .camera-section, .status-message, .results-area, .registration-progress {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: #fdfdfd;
+        }
+
+        .mode-selector label, .input-group label {
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-group label {
+           flex-basis: 150px; /* Adjusted width for labels */
+           margin-right: 10px;
+        }
+
+        .input-group input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+
+        video {
+            display: block;
+            margin: 0 auto 15px auto;
+            border: 1px solid #ccc;
+            background-color: #eee;
+            max-width: 100%; /* Responsive video */
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #3498db;
+            color: white;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #2980b9;
+        }
+
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .status-message {
+            text-align: center;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .status-message.success {
+            background-color: #e8f5e9; /* Light green */
+            color: #2e7d32; /* Dark green */
+            border: 1px solid #a5d6a7;
+        }
+
+        .status-message.error {
+            background-color: #ffebee; /* Light red */
+            color: #c62828; /* Dark red */
+            border: 1px solid #ef9a9a;
+        }
+
+        .status-message.info {
+             background-color: #e3f2fd; /* Light blue */
+             color: #1565c0; /* Dark blue */
+             border: 1px solid #90caf9;
+        }
+
+
+        .results-area pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 4px;
+            white-space: pre-wrap; /* Wrap long lines */
+            word-wrap: break-word;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+        }
+        .results-area p {
+            margin: 5px 0;
+        }
+        .results-area p strong {
+            display: inline-block;
+            width: 180px; /* Align labels */
+        }
+
+        .registration-progress ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .registration-progress li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .registration-progress li.completed {
+            color: green;
+            text-decoration: line-through;
+        }
+        .registration-progress li.pending {
+            color: orange;
+        }
+        .registration-progress li.failed {
+            color: red;
+            font-weight: bold;
+        }
+
